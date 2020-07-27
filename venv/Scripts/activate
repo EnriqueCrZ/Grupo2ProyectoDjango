@@ -28,11 +28,7 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
-<<<<<<< HEAD
-    if [ ! "$1" = "nondestructive" ] ; then
-=======
     if [ ! "${1:-}" = "nondestructive" ] ; then
->>>>>>> 940fd4d0b291a94759dd8b2cf488c47de1ccc33f
     # Self destruct!
         unset -f deactivate
     fi
@@ -41,11 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\Enrique\PycharmProjects\Desweb2020Grupo2\venv"
-=======
-VIRTUAL_ENV="C:\Users\JP\PycharmProjects\Desweb2020Grupo2\venv"
->>>>>>> 940fd4d0b291a94759dd8b2cf488c47de1ccc33f
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
