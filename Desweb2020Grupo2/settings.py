@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = 'jqxzwy6s@_0ii-h%lh(abk7q9hyk9c5v7d#sht4u981ik+2*my'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Models.Usuario',
+    'Models.Alumno',
+    'Models.Nivel',
+    'Models.Sucursal',
+    'Models.Inscripcion',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +61,7 @@ ROOT_URLCONF = 'Desweb2020Grupo2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+
         'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
