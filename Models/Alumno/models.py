@@ -9,5 +9,3 @@ class Alumno(models.Model):
     telefono = models.CharField(max_length=10)
     correo = models.CharField(max_length=125)
 
-    def __str__(self):
-        return self.id_alumno
