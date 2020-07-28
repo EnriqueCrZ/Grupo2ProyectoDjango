@@ -1,4 +1,5 @@
 from django.db import models
+from Models.Sucursal.models import Sucursal
 
 
 class TipoUsuario(models.Model):
@@ -11,4 +12,5 @@ class Usuario(models.Model):
     nombre = models.CharField(max_length=45)
     correo = models.EmailField(max_length=125)
     password = models.CharField(max_length=45)
+    sucursar_id_sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     tipo_usuario_idtipo_usuario = models.ForeignKey(TipoUsuario, on_delete=models.CASCADE)

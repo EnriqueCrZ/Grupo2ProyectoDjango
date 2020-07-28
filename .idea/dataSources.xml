@@ -15,5 +15,22 @@
         </library>
       </libraries>
     </data-source>
+<<<<<<< HEAD
+=======
+    <data-source source="LOCAL" name="db [2]" uuid="0b7e5eb3-0deb-4322-b578-c0175d81f276">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Jenry\PycharmProjects\Grupo2ProyectoDjango\db.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/sqlite-jdbc-3.31.1.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+>>>>>>> 859b207c7031340d22030ab0c290d1650ffa6675
   </component>
 </project>
