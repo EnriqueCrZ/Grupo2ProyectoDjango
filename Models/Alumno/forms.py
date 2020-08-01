@@ -5,6 +5,7 @@ class formularioNuevoAlumno(ModelForm):
 
     class Meta:
         model = Alumno
+
         fields = [
             'nombre',
             'apellido',
@@ -20,5 +21,4 @@ class formularioNuevoAlumno(ModelForm):
             'telefono': 'Telefono O Celular',
             'correo': 'Correo electronico',
         }
-
 

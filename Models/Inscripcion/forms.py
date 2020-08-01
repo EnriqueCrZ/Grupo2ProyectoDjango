@@ -1,11 +1,9 @@
-from django.forms import forms
 from django.forms import ModelForm
 from django.forms import  DateInput
 from Models.Inscripcion.models import Inscripcion, Nota
 
-
-
 class formularioInscripcion(ModelForm):
+
 
     class Meta:
         model = Inscripcion
@@ -32,5 +30,6 @@ class formularioNotas(ModelForm):
         model = Nota
         fields = "__all__"
         widgets = {"fecha": DateInput(attrs={'type': 'date'})}
+
 
 

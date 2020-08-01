@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'Models.Sucursal',
     'Models.Inscripcion',
     'crispy_forms',
+    'Models.Contrato'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -112,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "Usuario.User"
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -129,6 +132,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),

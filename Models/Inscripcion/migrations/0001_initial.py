@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('alumno_id_alumno', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Alumno.Alumno')),
                 ('nivel_id_nivel', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Nivel.Nivel')),
                 ('sucursal_id_sucursal', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Sucursal.Sucursal')),
-                ('usuario_id_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Usuario.Usuario')),
+                ('usuario_id_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Usuario.User')),
             ],
         ),
         migrations.CreateModel(
