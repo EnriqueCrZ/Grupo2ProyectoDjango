@@ -17,4 +17,5 @@ class Inscripcion(models.Model):
 class Nota(models.Model):
     id_nota = models.AutoField(primary_key=True)
     fecha = models.DateField()
+    nota = models.IntegerField(default=0)
     inscripcion_id_inscripcion = models.ForeignKey(Inscripcion, on_delete=models.CASCADE)
