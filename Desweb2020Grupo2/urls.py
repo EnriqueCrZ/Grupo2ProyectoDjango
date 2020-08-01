@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Views.urlView import urlsView
+from Models.Alumno.views import formularioAlumnoView
+from Models.Inscripcion.views import formularioInscribirView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path("", urlsView.index, name="navbar"),
+    path("registroAlumno/", formularioAlumnoView.index, name="registrarAlumno"),
+    path("guardarAlumno/", formularioAlumnoView.procesarFormulario, name="guardarAlumno"),
+    path("formInscribirAlumni", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),
+    path("inscribirAlumno/", formularioInscribirView.formularioInscripcion, name="inscribir"),
+    path("alumnosInscritos/", formularioInscribirView.listar_alumnos, name="mostrarInscritos"),
+    path("botonEliminar/<int:id>/", formularioInscribirView.eliminarAlumno, name="btnEliminar"),
 ]

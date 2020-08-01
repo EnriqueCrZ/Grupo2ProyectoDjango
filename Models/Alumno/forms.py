@@ -5,5 +5,20 @@ class formularioNuevoAlumno(ModelForm):
 
     class Meta:
         model = Alumno
-        fields = "__all__"
+        fields = [
+            'nombre',
+            'apellido',
+            'dpi',
+            'telefono',
+            'correo',
+        ]
+
+        labels = {
+            'nombre': 'Nombre',
+            'apellido': 'Apellido',
+            'dpi': 'DPI',
+            'telefono': 'Telefono O Celular',
+            'correo': 'Correo electronico',
+        }
+
 

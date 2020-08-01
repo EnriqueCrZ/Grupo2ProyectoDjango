@@ -8,3 +8,6 @@ class Sucursal(models.Model):
     direccion = models.CharField(max_length=125)
     correo = models.CharField(max_length=125)
     telefono = models.CharField(max_length=10)
+
+    def __str__(self):
+        return '{}'.format(self.nombre)
