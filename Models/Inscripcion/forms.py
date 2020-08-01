@@ -1,20 +1,35 @@
-from django.forms import forms
 from django.forms import ModelForm
+from django.forms import  DateInput
 from Models.Inscripcion.models import Inscripcion, Nota
 
-
-
 class formularioInscripcion(ModelForm):
+
+
     class Meta:
         model = Inscripcion
-        fields = "__all__"
-        widgets = {"fecha_registro": forms.DateInput(attrs={'type': 'date'})}
+        fields = [
+            'alumno_id_alumno',
+            'nivel_id_nivel',
+            'sucursal_id_sucursal',
+            'fecha',
+            'usuario_id_user',
+        ]
+
+        labels = {
+            'alumno_id_alumno': 'Nombre de Alumno',
+            'nivel_id_nivel': 'Grado y Nivel',
+            'sucursal_id_sucursal': 'Sucursal',
+            'fecha':'Fecha de Asignación',
+            'usuario_id_user': 'Usuario',
+        }
+        widgets = {"fecha": DateInput(attrs={'type': 'date'})}
 
 
 class formularioNotas(ModelForm):
     class Meta:
         model = Nota
         fields = "__all__"
-        widgets = {"fecha_notas": forms.DateInput(attrs={'type': 'date'})}
+        widgets = {"fecha": DateInput(attrs={'type': 'date'})}
+
 
 

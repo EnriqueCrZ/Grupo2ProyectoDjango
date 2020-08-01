@@ -1,6 +1,5 @@
 from django import forms
 from Models.Usuario.models import TipoUsuario, User
-from Models.Sucursal.models import Sucursal
 from django.contrib.auth import get_user_model
 
 
@@ -33,3 +32,4 @@ class FormularioRegistro(forms.ModelForm):
         model = User
         fields = ('password', 'correo', 'nombre')
         widgets = {}
+
