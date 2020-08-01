@@ -3,5 +3,9 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Desweb2020Grupo2)" project-jdk-type="Python SDK" />
+=======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (Grupo2ProyectoDjango)" project-jdk-type="Python SDK" />
+>>>>>>> 859b207c7031340d22030ab0c290d1650ffa6675
 </project>

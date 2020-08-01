@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Models.Nivel',
     'Models.Sucursal',
     'Models.Inscripcion',
+    'Models.Contrato'
 ]
 
 MIDDLEWARE = [
@@ -108,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "Usuario.User"
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -125,5 +128,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    '/PycharmProjects/Desweb2020Grupo2/Static'
+]
 
 STATIC_URL = '/static/'

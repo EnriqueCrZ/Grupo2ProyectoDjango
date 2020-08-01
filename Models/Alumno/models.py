@@ -7,5 +7,4 @@ class Alumno(models.Model):
     apellido = models.CharField(max_length=45)
     dpi = models.CharField(max_length=13, unique=True)
     telefono = models.CharField(max_length=10)
-    correo = models.CharField(max_length=125)
-
+    correo = models.EmailField(max_length=125)
