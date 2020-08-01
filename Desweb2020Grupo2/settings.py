@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'Models.Nivel',
     'Models.Sucursal',
     'Models.Inscripcion',
+<<<<<<< HEAD
+=======
     'crispy_forms',
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
     'Models.Contrato'
 ]
 
@@ -132,6 +135,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    '/PycharmProjects/Desweb2020Grupo2/Static'
+]
 
 
 STATICFILES_DIRS = [
