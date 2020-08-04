@@ -10982,9 +10982,7 @@ form.user .btn-user {
   }
   100% {
     clip: rect(1px, 9999px, 81px, 0);
-=======
->>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
->>>>>>> 16b887b38d6f776fa4893fc39913c906d5530ed4
+
     clip: rect(78px, 9999px, 4px, 0);
   }
   5% {
