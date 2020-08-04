@@ -31,14 +31,14 @@ def Dashboard(request):
 
 def Logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse_lazy('dashboard'))
+    return HttpResponseRedirect(reverse_lazy('navbar'))
 
 
 class LoginView(FormView):
     """login view"""
 
     form_class = forms.LoginForm
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('navbar')
     template_name = 'user_auth/Templates/login.html'
 
     def form_valid(self, form):

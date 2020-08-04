@@ -11,8 +11,10 @@ class Alumno(models.Model):
 <<<<<<< HEAD
 =======
 
-
     def __str__(self):
         return '{} {}'.format(self.nombre, self.apellido)
+<<<<<<< HEAD
+=======
 
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 16b887b38d6f776fa4893fc39913c906d5530ed4

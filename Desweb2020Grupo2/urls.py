@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from Views.urlView import urlsView
+from Views import urlView
 from Models.Alumno.views import formularioAlumnoView
 from Models.Inscripcion.views import formularioInscribirView
 from django.urls import path, include
@@ -22,7 +23,7 @@ from Models.Usuario import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path("", urlsView.index, name="navbar"),
+    path("", urlView.mainView, name="navbar"),
     path("registroAlumno/", formularioAlumnoView.index, name="registrarAlumno"),
     path("guardarAlumno/", formularioAlumnoView.procesarFormulario, name="guardarAlumno"),
     path("formInscribirAlumni", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),

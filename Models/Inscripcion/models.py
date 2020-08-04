@@ -15,9 +15,11 @@ class Inscripcion(models.Model):
 <<<<<<< HEAD
 =======
 
+
     def __str__(self):
         return '{}'.format(self.alumno_id_alumno)
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+
 
 
 class Nota(models.Model):
