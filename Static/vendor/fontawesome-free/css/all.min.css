@@ -17,8 +17,8 @@
 
     background-image: url(/static/img/backgroud-prueba.jpg);
     background-position: center;
-    /*background-size: cover;*/
+    background-size: cover;
     background-repeat:no-repeat ;
-    width: 2880px; height: 1800px;
+    width: 1500; height: 900px;
 }
 
