@@ -9,9 +9,9 @@ class Sucursal(models.Model):
     correo = models.EmailField(max_length=125)
     telefono = models.CharField(max_length=10)
 
-    #def __str__(self):
-     #  return '{}'.format(self.nombre)
-
     def __str__(self):
         return self.nombre
+
+    #def __str__(self):
+     #  return '{}'.format(self.nombre)
 

@@ -10920,7 +10920,6 @@ form.user .btn-user {
 
 @-webkit-keyframes noise-anim {
   0% {
-<<<<<<< HEAD
     clip: rect(68px, 9999px, 85px, 0);
   }
   5% {
@@ -10983,6 +10982,10 @@ form.user .btn-user {
   100% {
     clip: rect(1px, 9999px, 81px, 0);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
     clip: rect(78px, 9999px, 4px, 0);
   }
   5% {
@@ -11044,13 +11047,11 @@ form.user .btn-user {
   }
   100% {
     clip: rect(12px, 9999px, 19px, 0);
->>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
   }
 }
 
 @keyframes noise-anim {
   0% {
-<<<<<<< HEAD
     clip: rect(68px, 9999px, 85px, 0);
   }
   5% {
@@ -11112,7 +11113,7 @@ form.user .btn-user {
   }
   100% {
     clip: rect(1px, 9999px, 81px, 0);
-=======
+
     clip: rect(78px, 9999px, 4px, 0);
   }
   5% {
@@ -11174,7 +11175,6 @@ form.user .btn-user {
   }
   100% {
     clip: rect(12px, 9999px, 19px, 0);
->>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
   }
 }
 
@@ -11193,7 +11193,6 @@ form.user .btn-user {
 
 @-webkit-keyframes noise-anim-2 {
   0% {
-<<<<<<< HEAD
     clip: rect(63px, 9999px, 4px, 0);
   }
   5% {
@@ -11256,6 +11255,10 @@ form.user .btn-user {
   100% {
     clip: rect(29px, 9999px, 41px, 0);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
     clip: rect(20px, 9999px, 91px, 0);
   }
   5% {
@@ -11317,13 +11320,12 @@ form.user .btn-user {
   }
   100% {
     clip: rect(5px, 9999px, 29px, 0);
->>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
+
   }
 }
 
 @keyframes noise-anim-2 {
   0% {
-<<<<<<< HEAD
     clip: rect(63px, 9999px, 4px, 0);
   }
   5% {
@@ -11386,6 +11388,10 @@ form.user .btn-user {
   100% {
     clip: rect(29px, 9999px, 41px, 0);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
     clip: rect(20px, 9999px, 91px, 0);
   }
   5% {
@@ -11447,7 +11453,6 @@ form.user .btn-user {
   }
   100% {
     clip: rect(5px, 9999px, 29px, 0);
->>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
   }
 }
 

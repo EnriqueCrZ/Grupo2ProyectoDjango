@@ -5,5 +5,5 @@ from django.template.loader import get_template
 class urlsView():
 
     def index(self):
-        navbar = get_template("Index.html")
+        navbar = get_template("index.html")
         return HttpResponse(navbar.render())

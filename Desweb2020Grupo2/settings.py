@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'Models.Sucursal',
     'Models.Inscripcion',
     'crispy_forms',
-    'Models.Contrato'
+    'Models.Contrato',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
