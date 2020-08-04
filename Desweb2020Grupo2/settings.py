@@ -44,11 +44,8 @@ INSTALLED_APPS = [
     'Models.Nivel',
     'Models.Sucursal',
     'Models.Inscripcion',
-<<<<<<< HEAD
-=======
     'crispy_forms',
->>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
-    'Models.Contrato'
+    'Models.Contrato',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -138,12 +135,6 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     '/PycharmProjects/Desweb2020Grupo2/Static'
-]
-
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/PycharmProjects/Grupo2ProyectoDjango/Static',
 ]
 
 STATIC_URL = '/static/'

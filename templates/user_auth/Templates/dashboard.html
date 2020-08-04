@@ -342,7 +342,7 @@
 
 
 {% if request.user.is_authenticated %}
-<h1>Congratulations!! You are now logged In dear {{request.user.name}} </h1>
+<h1>Congratulations!! You are now logged In dear {{request.user.nombre}} </h1>
 <div class="">
 <button type="button" name="button"><a href="{% url 'logout' %}">Logout</a></button>
 </div>

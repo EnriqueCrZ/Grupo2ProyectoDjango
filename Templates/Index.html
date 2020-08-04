@@ -46,6 +46,12 @@
          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
             <i class="fas fa-fw fa-home"></i>
           <span>Inicio</span></a>
+          {% if request.user.is_authenticated %}
+              <button type="button" name="button" class="nav-link"><a href="{% url 'logout' %}">Logout</a></button>
+              {% else %}
+              <button type="button" name="button" class="nav-link"><a href="{% url 'login' %}">Login</a></button>
+          {%endif%}
+
       </li>
 
       <!-- Divider -->
@@ -139,7 +145,11 @@
     <!-- contenet wrapper == se mueven de lado derecho del navbar-->
      <div class = "content container" >
         {%  block content %}
-
+         {% if request.user.is_authenticated %}
+            <h1>Logeado como: {{request.user.nombre}} </h1>
+        {% else %}
+            <h1>No esta logeado. Acceso denegado</h1>
+        {%endif%}
         {% endblock %}
       </div>
   </div>
