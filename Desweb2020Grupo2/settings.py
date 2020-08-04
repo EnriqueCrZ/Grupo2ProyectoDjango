@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Models.Inscripcion',
     'crispy_forms',
     'Models.Contrato',
+    'Models.Contrato',
     'Models.Contrato'
 ]
 
@@ -138,6 +139,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     '/PycharmProjects/Desweb2020Grupo2/Static'
 ]
-
 
 STATIC_URL = '/static/'
