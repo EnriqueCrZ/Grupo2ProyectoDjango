@@ -19,15 +19,8 @@ class LoginForm(forms.Form):
     correo = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput())
 
-class formularioTipoUsuario(forms.ModelForm):
-
-    class Meta:
-        model = TipoUsuario
-        fields = "__all__"
-
 
 class FormularioRegistro(forms.ModelForm):
     class Meta:
         model = User
         fields = ('password', 'correo', 'nombre')
-        widgets = {}

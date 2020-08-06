@@ -16,6 +16,11 @@ class Inscripcion(models.Model):
     def __str__(self):
         return '{}'.format(self.alumno_id_alumno)
 
+    def __str__(self):
+        return '{}'.format(self.alumno_id_alumno)
+
+
+
 class Nota(models.Model):
     id_nota = models.AutoField(primary_key=True)
     fecha = models.DateField()

@@ -1,3 +1,4 @@
+
 {% extends "nabvar.html" %}
 
 {% block content %}
@@ -39,7 +40,7 @@
                       <td>{{ alumnos.fecha }}</td>
                         <td>
                             <div class="my-2"></div>
-                            <a href="#" class="btn btn-warning btn-icon-split">
+                            <a href="{% url 'modificarAsignacion' alumnos.pk %}" class="btn btn-warning btn-icon-split">
                                 <span class="icon text-white-50">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 </span>

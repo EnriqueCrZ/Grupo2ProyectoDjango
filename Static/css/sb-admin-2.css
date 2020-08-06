@@ -10981,11 +10981,6 @@ form.user .btn-user {
   }
   100% {
     clip: rect(1px, 9999px, 81px, 0);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
->>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
     clip: rect(78px, 9999px, 4px, 0);
   }
   5% {
@@ -11113,8 +11108,8 @@ form.user .btn-user {
   }
   100% {
     clip: rect(1px, 9999px, 81px, 0);
-
     clip: rect(78px, 9999px, 4px, 0);
+
   }
   5% {
     clip: rect(87px, 9999px, 70px, 0);
@@ -11175,6 +11170,7 @@ form.user .btn-user {
   }
   100% {
     clip: rect(12px, 9999px, 19px, 0);
+
   }
 }
 
@@ -11253,12 +11249,11 @@ form.user .btn-user {
     clip: rect(72px, 9999px, 32px, 0);
   }
   100% {
+
     clip: rect(29px, 9999px, 41px, 0);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
->>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+
+    clip: rect(29px, 9999px, 41px, 0);
+
     clip: rect(20px, 9999px, 91px, 0);
   }
   5% {
@@ -11326,6 +11321,7 @@ form.user .btn-user {
 
 @keyframes noise-anim-2 {
   0% {
+
     clip: rect(63px, 9999px, 4px, 0);
   }
   5% {
@@ -11386,12 +11382,11 @@ form.user .btn-user {
     clip: rect(72px, 9999px, 32px, 0);
   }
   100% {
+
     clip: rect(29px, 9999px, 41px, 0);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
->>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+
+    clip: rect(29px, 9999px, 41px, 0);
+
     clip: rect(20px, 9999px, 91px, 0);
   }
   5% {
@@ -11453,6 +11448,7 @@ form.user .btn-user {
   }
   100% {
     clip: rect(5px, 9999px, 29px, 0);
+
   }
 }
 

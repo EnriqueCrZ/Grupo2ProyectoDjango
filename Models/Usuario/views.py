@@ -31,7 +31,7 @@ def Dashboard(request):
 
 def Logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse_lazy('dashboard'))
+    return HttpResponseRedirect(reverse_lazy('login'))
 
 
 class LoginView(FormView):

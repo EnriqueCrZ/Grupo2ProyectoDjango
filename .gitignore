@@ -1,4 +1,9 @@
 node_modules
+<<<<<<< HEAD
 /.idea/
 .idea/workspace.xml
 
+=======
+.idea/
+.idea/workspace.xml
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903

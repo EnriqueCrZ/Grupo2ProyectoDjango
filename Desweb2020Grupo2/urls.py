@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-
 from Views.urlView import urlsView
 from Models.Alumno.views import formularioAlumnoView
 from Models.Inscripcion.views import formularioInscribirView
@@ -24,17 +23,19 @@ from Models.Usuario import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("", views.LoginView.as_view(), name="login"),
-    path("index", urlsView.index, name="index"),
+    path("index", urlsView.mainView, name="index"),
+    #crud alumno y asignar alumno
     path("registroAlumno/", formularioAlumnoView.index, name="registrarAlumno"),
     path("guardarAlumno/", formularioAlumnoView.procesarFormulario, name="guardarAlumno"),
     path("formInscribirAlumni", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),
-    path("inscribirAlumno/", formularioInscribirView.formularioInscripcion, name="inscribir"),
+    path("inscribirAlumno/", formularioInscribirView.formulario_Inscripcion, name="inscribir"),
     path("alumnosInscritos/", formularioInscribirView.listar_alumnos, name="mostrarInscritos"),
-    path("botonEliminar/<int:id>/", formularioInscribirView.eliminarAlumno, name="btnEliminar"),
+    path("botonEliminar/<id>/", formularioInscribirView.eliminarAlumno, name="btnEliminar"),
+    path("modificarAsignacion/<id>/", formularioInscribirView.modificar_alumno_sucursal, name="modificarAsignacion"),
+
     # parte de enrique
     path('auth/registro/', views.SignupView.as_view(), name='signup'),
     path('auth/', views.Dashboard, name='dashboard'),
     path('auth/logout/', views.Logout, name='logout'),
-
 ]
 
