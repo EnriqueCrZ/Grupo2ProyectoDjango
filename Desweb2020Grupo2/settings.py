@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'Models.Inscripcion',
     'crispy_forms',
     'Models.Contrato',
-    'Models.Contrato',
-    'Models.Contrato'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,8 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    '/PycharmProjects/Desweb2020Grupo2/Static'
+    os.path.join(BASE_DIR, "static"),
+    '/PycharmProjects/Grupo2ProyectoDjango/Static',
 ]
 
 STATIC_URL = '/static/'

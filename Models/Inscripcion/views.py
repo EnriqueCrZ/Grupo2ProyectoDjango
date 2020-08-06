@@ -11,7 +11,7 @@ class formularioInscribirView(HttpRequest):
         inscribir = formularioInscripcion()
         return render(request, 'inscribirAlumno.html', {'form':inscribir})
 
-    def formularioInscripcion(request):
+    def formulario_Inscripcion(request):
 
         inscripcion = formularioInscripcion(request.POST)
         if inscripcion.is_valid():
@@ -29,3 +29,23 @@ class formularioInscribirView(HttpRequest):
 
 
         return redirect(to="mostrarInscritos")
+
+#    def modificar_alumno_sucursal(request, id):
+
+ #       alumno_sucursal = Inscripcion.objects.get(id_inscripcion=id)
+  #      data = { 'form': formularioInscripcion(instance=alumno_sucursal)}
+
+   #     return render(request, 'modificar_inscripcion.html', data)
+
+    def modificar_alumno_sucursal(request, id):
+        modificarRegistro = Inscripcion.objects.get(id_inscripcion=id)
+        data = {
+            'form': formularioInscripcion(instance=modificarRegistro)
+        }
+        if request.method == 'POST':
+            formulario = formularioInscripcion(data=request.POST, instance=modificarRegistro)
+            if formulario.is_valid():
+                formulario.save()
+                data['mensaje'] = "modificacion correcta"
+                data['form'] = formulario
+        return render(request, 'modificar_inscripcion.html', data)

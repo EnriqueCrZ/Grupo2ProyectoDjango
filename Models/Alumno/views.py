@@ -1,7 +1,8 @@
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from Models.Alumno.forms import formularioNuevoAlumno
-from Models.Alumno.models import Alumno
+
+
 
 class formularioAlumnoView(HttpRequest):
 
@@ -16,5 +17,4 @@ class formularioAlumnoView(HttpRequest):
         if alumno.is_valid():
             alumno.save()
             alumno = formularioNuevoAlumno()
-
         return render(request, "nuevoAlumno.html", {"form":alumno, "mensaje": "ok"})

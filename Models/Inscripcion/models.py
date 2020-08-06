@@ -13,6 +13,8 @@ class Inscripcion(models.Model):
     fecha = models.DateField()
     usuario_id_user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return '{}'.format(self.alumno_id_alumno)
 
     def __str__(self):
         return '{}'.format(self.alumno_id_alumno)
