@@ -2,7 +2,7 @@ node_modules
 .idea/
 .idea/workspace.xml
 Models/__pycache__
-__pycache__
+Desweb2020Grupo2/__pycache__
 Models/Alumno/__pycache__
 Models/Contrato/__pycache__
 Models/Inscripcion/__pycache__
