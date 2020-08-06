@@ -1,3 +1,11 @@
 node_modules
 .idea/
 .idea/workspace.xml
+Models/__pycache__
+__pycache__
+Models/Alumno/__pycache__
+Models/Contrato/__pycache__
+Models/Inscripcion/__pycache__
+Models/Nivel/__pycache__
+Models/Sucursal/__pycache__
+Models/Usuario/__pycache__
