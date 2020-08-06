@@ -3,7 +3,6 @@ from Models.Usuario.models import TipoUsuario, User
 from Models.Sucursal.models import Sucursal
 from django.contrib.auth import get_user_model
 
-
 class SignupForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput(), label='Contraseña')
 
@@ -21,17 +20,7 @@ class LoginForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput())
 
 
-class formularioTipoUsuario(forms.ModelForm):
-
-    class Meta:
-        model = TipoUsuario
-        fields = "__all__"
-
-
 class FormularioRegistro(forms.ModelForm):
     class Meta:
         model = User
         fields = ('password', 'correo', 'nombre')
-
-        widgets = {}
-

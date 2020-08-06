@@ -1,7 +1,15 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "_args": [
     [
       "@fortawesome/fontawesome-free@5.13.1",
@@ -10,7 +18,14 @@
   ],
 =======
 >>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "_from": "@fortawesome/fontawesome-free@5.13.1",
   "_id": "@fortawesome/fontawesome-free@5.13.1",
   "_inBundle": false,
@@ -33,11 +48,20 @@
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.1.tgz",
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "_shasum": "c53b4066edae16cd1fd669f687baf031b45fb9d6",
   "_spec": "@fortawesome/fontawesome-free@5.13.1",
   "_where": "/Users/DANGER_DAVID/Sites/startbootstrap-sb-admin-2",
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "_spec": "5.13.1",
   "_where": "C:\\Users\\Jenry\\Downloads\\startbootstrap-sb-admin-2-gh-pages",
 =======
@@ -45,7 +69,14 @@
   "_spec": "@fortawesome/fontawesome-free@5.13.1",
   "_where": "/Users/DANGER_DAVID/Sites/startbootstrap-sb-admin-2",
 >>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
@@ -55,6 +86,17 @@
     "url": "http://github.com/FortAwesome/Font-Awesome/issues"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "bundleDependencies": false,
+=======
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
+<<<<<<< HEAD
+=======
+  "bundleDependencies": false,
+>>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
+<<<<<<< HEAD
+=======
   "bundleDependencies": false,
 =======
 <<<<<<< HEAD
@@ -62,6 +104,10 @@
   "bundleDependencies": false,
 >>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+>>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "contributors": [
     {
       "name": "Brian Talbot",
@@ -86,6 +132,14 @@
   ],
   "dependencies": {},
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "deprecated": false,
+>>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
+=======
+=======
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "deprecated": false,
 =======
 <<<<<<< HEAD
@@ -93,6 +147,10 @@
   "deprecated": false,
 >>>>>>> aed3e02858ac53495cd666dfece4f0f092e546cf
 >>>>>>> 20a72d395c09def9a8acb9a816eb1404e86847d7
+<<<<<<< HEAD
+>>>>>>> 03ebfb884b21205a343404835c2e74287d1bba69
+=======
+>>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
   "description": "The iconic font, CSS, and SVG framework",
   "engines": {
     "node": ">=6"

@@ -9,7 +9,7 @@
     {% if form.errors %}
 
         <div class="alert alert-danger" role="alert">
-             No fue posible asignar el curso
+             No fue posible cambiar datos del alumno
         </div>
 
     {% endif %}
@@ -18,15 +18,15 @@
     <p></p>
     <p></p>
 
-    <h1> Asignación de curso </h1>
+    <h1> Modificar asginacion de  curso y sucursal </h1>
 
-    <form action = "{% url 'inscribir' %}" method="POST" >
+    <form method="POST" >
 
         {% csrf_token %}
         {% if mensaje %}
 
         <div class="alert alert-success" role="alert">
-            Alumno asignado exitosamente
+            Modificacion exitosa
         </div>
         {% endif %}
 
@@ -36,8 +36,5 @@
 
     </form>
     </div>
-
-
-
 
 {% endblock %}

@@ -10,7 +10,7 @@ from django.contrib.auth import hashers
 
 class SignupView(FormView):
     form_class = forms.SignupForm
-    template_name = 'user_auth/Templates/signup.html'
+    template_name = 'signup.html'
     success_url = reverse_lazy('dashboard')
 
     def form_valid(self, form):
@@ -26,20 +26,20 @@ class SignupView(FormView):
 
 
 def Dashboard(request):
-    return render(request, 'user_auth/Templates/dashboard.html')
+    return render(request, 'dashboard.html')
 
 
 def Logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse_lazy('navbar'))
+    return HttpResponseRedirect(reverse_lazy('login'))
 
 
 class LoginView(FormView):
     """login view"""
 
     form_class = forms.LoginForm
-    success_url = reverse_lazy('navbar')
-    template_name = 'user_auth/Templates/login.html'
+    success_url = reverse_lazy('index')
+    template_name = 'login.html'
 
     def form_valid(self, form):
         credentials = form.cleaned_data
