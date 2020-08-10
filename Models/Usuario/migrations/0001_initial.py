@@ -19,14 +19,4 @@ class Migration(migrations.Migration):
                 ('tipo', models.CharField(max_length=45)),
             ],
         ),
-        migrations.CreateModel(
-            name='Usuario',
-            fields=[
-                ('id_user', models.AutoField(primary_key=True, serialize=False)),
-                ('nombre', models.CharField(max_length=45)),
-                ('correo', models.CharField(max_length=125)),
-                ('password', models.CharField(max_length=45)),
-                ('tipo_usuario_idtipo_usuario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Usuario.TipoUsuario')),
-            ],
-        ),
     ]
