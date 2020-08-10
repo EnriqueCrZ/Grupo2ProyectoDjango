@@ -5,7 +5,6 @@ class Grado(models.Model):
     id_grado = models.AutoField(primary_key=True)
     nombre_grado = models.CharField(max_length=45)
 
-
     def __str__(self):
         return '{}'.format(self.nombre_grado)
 
