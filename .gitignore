@@ -9,4 +9,3 @@ Models/Inscripcion/__pycache__
 Models/Nivel/__pycache__
 Models/Sucursal/__pycache__
 Models/Usuario/__pycache__
-db.sqlite3
