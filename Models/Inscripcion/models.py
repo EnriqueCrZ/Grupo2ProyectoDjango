@@ -11,9 +11,15 @@ class Inscripcion(models.Model):
     nivel_id_nivel = models.ForeignKey(Nivel, on_delete=models.CASCADE)
     sucursal_id_sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     fecha = models.DateField()
-    nota = models.IntegerField(default=0, blank=True)
     usuario_id_user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return '{}'.format(self.alumno_id_alumno)
 
+
+
+class Nota(models.Model):
+    id_nota = models.AutoField(primary_key=True)
+    fecha = models.DateField()
+    nota = models.IntegerField(default=0)
+    inscripcion_id_inscripcion = models.ForeignKey(Inscripcion, on_delete=models.CASCADE)

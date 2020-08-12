@@ -2,6 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from Models.Inscripcion.forms import formularioInscripcion
 from Models.Inscripcion.forms import Inscripcion
+import logging
 
 
 class formularioInscribirView(HttpRequest):
@@ -14,8 +15,14 @@ class formularioInscribirView(HttpRequest):
     def formulario_Inscripcion(request):
 
         inscripcion = formularioInscripcion(request.POST)
+
+        logger = logging.getLogger(__name__)
+
         if inscripcion.is_valid():
-            inscripcion.save()
+            registro = inscripcion.save(commit=False)
+            registro.usuario_id_user = request.user
+            logger.error(registro)
+            registro.save()
             inscripcion = formularioInscripcion()
 
         return render(request, "inscribirAlumno.html", {"form":inscripcion, "mensaje": "ok"})
