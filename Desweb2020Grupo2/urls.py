@@ -27,7 +27,7 @@ urlpatterns = [
     #crud alumno y asignar alumno
     path("registroAlumno/", formularioAlumnoView.index, name="registrarAlumno"),
     path("guardarAlumno/", formularioAlumnoView.procesarFormulario, name="guardarAlumno"),
-    path("formInscribirAlumni", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),
+    path("formInscribirAlumno/", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),
     path("inscribirAlumno/", formularioInscribirView.formulario_Inscripcion, name="inscribir"),
     path("alumnosInscritos/", formularioInscribirView.listar_alumnos, name="mostrarInscritos"),
     path("botonEliminar/<id>/", formularioInscribirView.eliminarAlumno, name="btnEliminar"),
