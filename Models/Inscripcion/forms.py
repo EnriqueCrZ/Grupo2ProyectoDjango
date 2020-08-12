@@ -12,7 +12,6 @@ class formularioInscripcion(ModelForm):
             'nivel_id_nivel',
             'sucursal_id_sucursal',
             'fecha',
-            'usuario_id_user',
         ]
 
         labels = {
@@ -20,6 +19,5 @@ class formularioInscripcion(ModelForm):
             'nivel_id_nivel': 'Grado y Nivel',
             'sucursal_id_sucursal': 'Sucursal',
             'fecha':'Fecha de Asignación',
-            'usuario_id_user': 'Usuario',
         }
         widgets = {"fecha": DateInput(attrs={'type': 'date'})}
