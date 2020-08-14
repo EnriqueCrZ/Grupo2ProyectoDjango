@@ -1,9 +1,11 @@
 node_modules
-<<<<<<< HEAD
-/.idea/
-.idea/workspace.xml
-
-=======
 .idea/
 .idea/workspace.xml
->>>>>>> eb9c1493d6edc0a08219146634e6f5a792b6c903
+Models/__pycache__
+Desweb2020Grupo2/__pycache__
+Models/Alumno/__pycache__
+Models/Contrato/__pycache__
+Models/Inscripcion/__pycache__
+Models/Nivel/__pycache__
+Models/Sucursal/__pycache__
+Models/Usuario/__pycache__

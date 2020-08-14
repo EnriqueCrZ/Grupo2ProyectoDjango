@@ -1,0 +1,67 @@
+
+{% extends "nabvar.html" %}
+
+{% block content %}
+
+    <p></p>
+
+<div class="container-fluid">
+
+
+    <div class="card shadow mb-4">
+
+          <!-- Page Heading -->
+          <div class="card-header py-3">
+              <h3 class="m-0 font-weight-bold text-primary">Profesores Asignados</h3>
+            </div>
+
+          <!-- DataTales  -->
+            <div class="ca  rd-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th scope= "col">Codigo</th>
+                      <th scope= "col">Nombre</th>
+                      <th scope= "col">Grado y Nivel</th>
+                      <th scope= "col">Fecha de inscripcion</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for profesor in lb_Profesores %}
+                    <tr>
+                      <th scope="row">{{ profesor.pk }}</th>
+                      <td>{{ profesor.catedratico_id_catedratico }}</td>
+                      <td>{{ profesor.nivel_id_nivel }}</td>
+                      <td>{{ profesor.fecha }}</td>
+                        <td>
+                            <div class="my-2"></div>
+                            <a href="{% url 'modificarProfesor' profesor.pk %}" class="btn btn-warning btn-icon-split">
+                                <span class="icon text-white-50">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                                <span class="text">Editar</span>
+                            </a>
+                        </td>
+                        <td>
+                            <div class="my-2"></div>
+                            <a href="{% url 'purgarProfesor' profesor.pk %}" class="btn btn-danger btn-icon-split">
+                                <span class="icon text-white-50">
+                                <i class="fas fa-trash"></i>
+                                </span>
+                                <span class="text">Eliminar</span>
+                            </a>
+                            <div class="my-2"></div>
+                        </td>
+                    </tr>
+                  {% endfor %}
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,9 +1,8 @@
 from django.forms import ModelForm
-from django.forms import  DateInput
+from django.forms import DateInput
 from Models.Inscripcion.models import Inscripcion, Nota
 
 class formularioInscripcion(ModelForm):
-
 
     class Meta:
         model = Inscripcion
@@ -12,7 +11,6 @@ class formularioInscripcion(ModelForm):
             'nivel_id_nivel',
             'sucursal_id_sucursal',
             'fecha',
-            'usuario_id_user',
         ]
 
         labels = {
@@ -20,16 +18,33 @@ class formularioInscripcion(ModelForm):
             'nivel_id_nivel': 'Grado y Nivel',
             'sucursal_id_sucursal': 'Sucursal',
             'fecha':'Fecha de Asignación',
-            'usuario_id_user': 'Usuario',
         }
-        widgets = {"fecha": DateInput(attrs={'type': 'date'})}
+        widgets = {
+
+            #"alumno_id_alumno": TextInput(),
+            #"alumno_id_alumno":  autocomplete.ModelSelect2(url='inscribir'),
+            "fecha": DateInput(attrs={'type': 'date'}),
+                   }
+class formularioNota(ModelForm):
 
 
-class formularioNotas(ModelForm):
     class Meta:
         model = Nota
-        fields = "__all__"
-        widgets = {"fecha": DateInput(attrs={'type': 'date'})}
+        fields = [
+            'inscripcion_id_inscripcion',
+            'nota',
+            'fecha',
+        ]
 
+        labels = {
+            'inscripcion_id_inscripcion': 'Alumno',
+            'nota': 'Nota',
+            'fecha': 'Fecha',
+        }
+        widgets = {
 
+            # "alumno_id_alumno": TextInput(),
+            # "alumno_id_alumno":  autocomplete.ModelSelect2(url='inscribir'),
+            "fecha": DateInput(attrs={'type': 'date'}),
+        }
 

@@ -16,15 +16,18 @@ Including another URLconf
 
 from Views.urlView import urlsView
 from Models.Alumno.views import formularioAlumnoView
-from Models.Inscripcion.views import formularioInscribirView
+from Models.Inscripcion.views import formularioInscribirView, formNotasView
+from Models.Contrato.views import formularioProfesorView
 from django.urls import path
 from Models.Usuario import views
+from Models.Inscripcion.models import Inscripcion
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("", views.LoginView.as_view(), name="login"),
     path("index", urlsView.mainView, name="index"),
-    #crud alumno y asignar alumno
+
+    #modulo alumno y asignacion de curso
     path("registroAlumno/", formularioAlumnoView.index, name="registrarAlumno"),
     path("guardarAlumno/", formularioAlumnoView.procesarFormulario, name="guardarAlumno"),
     path("formInscribirAlumno/", formularioInscribirView.indexInscripcion, name="inscribirAlumno"),
@@ -33,6 +36,20 @@ urlpatterns = [
     path("botonEliminar/<id>/", formularioInscribirView.eliminarAlumno, name="btnEliminar"),
     path("modificarAsignacion/<id>/", formularioInscribirView.modificar_alumno_sucursal, name="modificarAsignacion"),
 
+    #modulo profesor
+    path("nuevoProfesor/", formularioProfesorView.indexProfesor , name="formProfesor"),
+    path("guardarProfesor/", formularioProfesorView.formulario_Profesor, name="guardarProfesor"),
+    path("asignacionCursoProfesor/", formularioProfesorView.indexAsignacionProfesor , name="formAsigProfe"),
+    path("guardarAsigProfesor/", formularioProfesorView.formulario_Asignacion_Profesor, name="guardarAsigCurso"),
+    path("listProfesores/", formularioProfesorView.listar_profesores, name="mostrarProfesores"),
+    path("eliminarProfesor/<id>/", formularioProfesorView.eliminarProfesor, name="purgarProfesor"),
+    path("modificarAsigProfesor/<id>/", formularioProfesorView.modificar_profesor, name="modificarProfesor"),
+
+    #modulo de notas
+    path("nuevaNota/", formNotasView.indexNotas, name="formNotas"),
+    path("guardarNota/", formNotasView.formularioNotas, name="guardarNotas"),
+    path("listNotas/", formNotasView.listar_notas, name="mostrarNotas"),
+    path("eliminarNota/<id>/", formNotasView.eliminarNota, name="purgarNota"),
     # parte de enrique
     path('auth/registro/', views.SignupView.as_view(), name='signup'),
     path('auth/', views.Dashboard, name='dashboard'),

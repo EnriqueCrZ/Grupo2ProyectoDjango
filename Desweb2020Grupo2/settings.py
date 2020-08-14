@@ -33,12 +33,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #AUTOCOMPLETAR
+    'dal',
+    'dal_select2',
+    #-------------
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #BD.FORM
     'Models.Usuario',
     'Models.Alumno',
     'Models.Nivel',

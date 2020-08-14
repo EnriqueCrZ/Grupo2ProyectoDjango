@@ -74,7 +74,6 @@
             <h6 class="collapse-header">Registro de alumnos</h6>
             <a class="collapse-item" href="{% url 'registrarAlumno' %}">Nuevo Alumno</a>
             <a class="collapse-item" href="{% url 'inscribirAlumno' %}">Inscribir Alumno</a>
-            <a class="collapse-item" href="cards.html">Actualizar Datos</a>
           </div>
         </div>
       </li>
@@ -91,43 +90,56 @@
       <!-- Linea de division -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
+      <!-- Encabezado -->
       <div class="sidebar-heading">
-        Addons
+        Profesores
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Pages Collapse Menu --->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-fw fa-address-card"></i>
+          <span>Profesores</span> <!-- titulo -->
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <h6 class="collapse-header">Registro de profesores</h6>
+            <a class="collapse-item" href="{% url 'formProfesor' %}">Nuevo Profesor</a>
+            <a class="collapse-item" href="{% url 'formAsigProfe' %}">Asignación Curso</a>
           </div>
         </div>
       </li>
 
-      <!-- Nav Item - Charts -->
+      <!-- Nav Item - Profesores asignados -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link collapsed" href="{% url 'mostrarProfesores' %}"  >
+          <i class="fas fa-fw fa-book"></i>
+          <span>Profesor por Curso</span>
+        </a>
+
       </li>
 
-      <!-- Nav Item - Tables -->
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Encabezado -->
+      <div class="sidebar-heading">
+        Notas
+      </div>
+        <!-- Nav Item - Notas -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+        <a class="nav-link collapsed" href="{% url 'formNotas' %}"  >
+          <i class="fas fa-fw fa-book"></i>
+          <span>Nueva Nota</span>
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'mostrarNotas' %}"  >
+          <i class="fas fa-fw fa-book"></i>
+          <span>Ver Notas</span>
+        </a>
+
       </li>
 
       <!-- Divider -->
@@ -144,12 +156,20 @@
     <!-- End of Sidebar -->
 
     <!-- contenet wrapper == se mueven de lado derecho del navbar-->
-     <div class = "container-fluid" >
+     <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+          <!-- contenedio de pagina -->
+
 
         {%  block content %}
 
         {% endblock %}
       </div>
+
+     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
