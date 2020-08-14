@@ -8,7 +8,7 @@
     {% if form.errors %}
 
         <div class="alert alert-danger" role="alert">
-             No fue posible registrar
+             No fue posible ingresar la Nota
         </div>
 
     {% endif %}
@@ -17,15 +17,15 @@
     <p></p>
     <p></p>
 
-    <h1> Registro de Alumnos</h1>
+    <h1> Nueva Nota</h1>
 
-    <form action = "{% url 'guardarAlumno' %}" method="POST" >
+    <form action = "{% url 'guardarNotas' %}" method="POST" >
 
         {% csrf_token %}
         {% if mensaje %}
 
         <div class="alert alert-success" role="alert">
-            Alumno registrado exitosamente
+            Nota ingresada exitosamente
         </div>
         {% endif %}
 

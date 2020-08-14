@@ -1,7 +1,7 @@
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
-from Models.Inscripcion.forms import formularioInscripcion
-from Models.Inscripcion.forms import Inscripcion
+from Models.Inscripcion.forms import formularioInscripcion, formularioNota
+from Models.Inscripcion.forms import Inscripcion, Nota
 import logging
 
 
@@ -25,7 +25,7 @@ class formularioInscribirView(HttpRequest):
             registro.save()
             inscripcion = formularioInscripcion()
 
-        return render(request, "inscribirAlumno.html", {"form":inscripcion, "mensaje": "ok"})
+        return render(request, "inscribirAlumno.html", {"formset":inscripcion, "mensaje": "ok"})
 
     def listar_alumnos(request):
         alumnos = Inscripcion.objects.all()
@@ -36,13 +36,6 @@ class formularioInscribirView(HttpRequest):
 
 
         return redirect(to="mostrarInscritos")
-
-#    def modificar_alumno_sucursal(request, id):
-
- #       alumno_sucursal = Inscripcion.objects.get(id_inscripcion=id)
-  #      data = { 'form': formularioInscripcion(instance=alumno_sucursal)}
-
-   #     return render(request, 'modificar_inscripcion.html', data)
 
     def modificar_alumno_sucursal(request, id):
         modificarRegistro = Inscripcion.objects.get(id_inscripcion=id)
@@ -56,3 +49,26 @@ class formularioInscribirView(HttpRequest):
                 data['mensaje'] = "modificacion correcta"
                 data['form'] = formulario
         return render(request, 'modificar_inscripcion.html', data)
+
+#formulario de notas
+
+class formNotasView(HttpRequest):
+
+    def indexNotas(request):
+        nota = formularioNota()
+        return render(request, 'nuevaNota.html', {'form': nota})
+
+    def formularioNotas(request):
+        lbNota = formularioNota(request.POST)
+        if lbNota.is_valid():
+            lbNota.save()
+            lbNota = formularioNota()
+        return render(request, "nuevaNota.html", {"form": lbNota, "mensaje": "ok"})
+
+    def listar_notas(request):
+        notas = Nota.objects.all()
+        return render(request, "listNotas.html", {"lb_notas": notas})
+
+    def eliminarNota(request, id):
+        Nota.objects.filter(id_nota=id).delete()
+        return redirect(to="mostrarNotas")

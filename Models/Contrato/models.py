@@ -10,6 +10,8 @@ class Catedratico(models.Model):
     telefono = models.CharField(max_length=10)
     correo = models.EmailField(max_length=125)
 
+    def __str__(self):
+        return '{} {}'.format(self.nombre, self.apellido)
 
 class Contrato(models.Model):
     id_contrato = models.AutoField(primary_key=True)

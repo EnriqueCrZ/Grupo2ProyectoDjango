@@ -7,7 +7,7 @@ from Models.Usuario.models import User
 
 class Inscripcion(models.Model):
     id_inscripcion = models.AutoField(primary_key=True)
-    alumno_id_alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
+    alumno_id_alumno = models.ForeignKey(Alumno, blank=False, on_delete=models.CASCADE)
     nivel_id_nivel = models.ForeignKey(Nivel, on_delete=models.CASCADE)
     sucursal_id_sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     fecha = models.DateField()
@@ -16,10 +16,8 @@ class Inscripcion(models.Model):
     def __str__(self):
         return '{}'.format(self.alumno_id_alumno)
 
-
-
 class Nota(models.Model):
     id_nota = models.AutoField(primary_key=True)
     fecha = models.DateField()
-    nota = models.IntegerField(default=0)
+    nota = models.IntegerField()
     inscripcion_id_inscripcion = models.ForeignKey(Inscripcion, on_delete=models.CASCADE)
