@@ -113,7 +113,7 @@
       <!-- Nav Item - Profesores asignados -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="{% url 'mostrarProfesores' %}"  >
-          <i class="fas fa-fw fa-book"></i>
+          <i class="fas fa-chalkboard-teacher"></i>
           <span>Profesor por Curso</span>
         </a>
 
@@ -129,14 +129,14 @@
         <!-- Nav Item - Notas -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="{% url 'formNotas' %}"  >
-          <i class="fas fa-fw fa-book"></i>
+          <i class="fas fa-plus-square"></i>
           <span>Nueva Nota</span>
         </a>
 
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="{% url 'mostrarNotas' %}"  >
-          <i class="fas fa-fw fa-book"></i>
+          <i class="fas fa-poll-h"></i>
           <span>Ver Notas</span>
         </a>
 
@@ -144,6 +144,15 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
+
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'logout' %}">
+        <div class="sidebar-brand-icon ">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3"> <sup>Cerrar Sesion</sup></div>
+      </a>
+
+        <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
