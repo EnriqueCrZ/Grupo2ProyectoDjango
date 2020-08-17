@@ -11,7 +11,7 @@ from django.contrib.auth import hashers
 class SignupView(FormView):
     form_class = forms.SignupForm
     template_name = 'signup.html'
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('index')
 
     def form_valid(self, form):
         data = form.cleaned_data
