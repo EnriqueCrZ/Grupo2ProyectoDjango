@@ -1,0 +1,39 @@
+
+{% extends 'nabvar.html' %}
+
+{% load crispy_forms_tags%}
+{% block content %}
+  <div class="container-fluid">
+    <div id="content-wrapper" class="d-flex flex-column">
+    {% if form.errors %}
+
+        <div class="alert alert-danger" role="alert">
+             No fue posible ingresar el grado
+        </div>
+
+    {% endif %}
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <h1> Nuevo Grado</h1>
+
+    <form action = "{% url 'saveGrade' %}" method="POST" >
+
+        {% csrf_token %}
+        {% if mensaje %}
+
+        <div class="alert alert-success" role="alert">
+            Grado ingresado exitosamente
+        </div>
+        {% endif %}
+
+        {{ form|crispy}}
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+
+    </form>
+    </div>
+  </div>
+{% endblock %}
