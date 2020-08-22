@@ -1,0 +1,81 @@
+{% extends 'nabvar.html' %}
+{% block content %}
+
+   <div class="card-header py-3">
+              <h3 class="m-0 font-weight-bold text-primary">REPORTES</h3>
+            </div>
+    <P> </P>
+
+    <div class="container-fluid">
+
+    <div class="row">
+        <a class= "col-xl-3 col-md-6 mb-4" href={% url 'repor_inscritos' %}>
+            <div class="card border-left-dark shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-0">Alumnos Inscritos por fecha</div>
+
+                       </div>
+                       <div class="col-auto">
+                          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+        <a class="col-xl-3 col-md-6 mb-4" href={% url 'repor_inscritos_curso_grado' %}>
+            <div class="card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-0">Alumnos inscritos por Grado y Curso.</div>
+
+                       </div>
+                       <div class="col-auto">
+                          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="{% url 'reportAlumnoNota' %}" class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-0">Notas por Alumno.</div>
+
+                       </div>
+                       <div class="col-auto">
+                          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="{% url 'reportAlumnoRegistrado' %}" class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-0">Alumnos registrados.</div>
+
+                       </div>
+                       <div class="col-auto">
+                          <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    </div>
+
+
+{% endblock %}

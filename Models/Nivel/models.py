@@ -14,4 +14,4 @@ class Nivel(models.Model):
     grado_id_grado = models.ForeignKey(Grado, on_delete=models.CASCADE)
 
     def __str__(self):
-        return '{} {}'.format(self.grado_id_grado, " - " + self.nombre_nivel)
+        return '{} {}'.format(self.grado_id_grado,self.nombre_nivel)

@@ -13,12 +13,41 @@
     width: 626px; height: 521px;
 }
 
+.register-image{
+
+    background-image: url(/static/img/registro.jpg);
+    background-position: center;
+    /*background-size: cover;*/
+    background-repeat:no-repeat ;
+    width: 1000px; height: 600px;
+}
+
+
 .carousel-img1{
 
-    background-image: url(/static/img/backgroud-prueba.jpg);
+    background-image: url(/static/img/pcs.jpg);
     background-position: center;
     background-size: cover;
     background-repeat:no-repeat ;
-    width: 1500; height: 900px;
+    width: 1500; height: 903px;
 }
 
+.carousel-img2 {
+
+    background-image: url(/static/img/señal.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1500;
+    height: 903px;
+}
+
+.carousel-img3 {
+
+    background-image: url(/static/img/pizarron.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1500;
+    height: 903px;
+}

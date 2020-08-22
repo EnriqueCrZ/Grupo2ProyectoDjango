@@ -16,7 +16,7 @@ Including another URLconf
 
 from Views.urlView import urlsView
 from Models.Alumno.views import formularioAlumnoView
-from Models.Inscripcion.views import formularioInscribirView, formNotasView
+from Models.Inscripcion.views import formularioInscribirView, formNotasView, reporInscritosView
 from Models.Contrato.views import formularioProfesorView
 from django.urls import path
 from Models.Usuario import views
@@ -54,5 +54,13 @@ urlpatterns = [
     path('auth/registro/', views.SignupView.as_view(), name='signup'),
     path('auth/', views.Dashboard, name='dashboard'),
     path('auth/logout/', views.Logout, name='logout'),
+
+    #----------modulo de reporte-----------
+
+    path("inicioReportes/", reporInscritosView.indexReportInscritos , name="reportes"),
+    path("reportInscritos/", reporInscritosView.reportInscritos , name="repor_inscritos"),
+    path("reportinscritos_curso_grado/", reporInscritosView.reportInscritos_cursoYgrado , name="repor_inscritos_curso_grado"),
+    path("reportNota_Alumno/", reporInscritosView.reportAlumnoNota , name="reportAlumnoNota"),
+    path("reportAlumnoRegistrados/", formularioAlumnoView.listar_registrados , name="reportAlumnoRegistrado"),
 ]
 
