@@ -13,14 +13,7 @@
     width: 626px; height: 521px;
 }
 
-.register-image{
 
-    background-image: url(/static/img/registro.jpg);
-    background-position: center;
-    /*background-size: cover;*/
-    background-repeat:no-repeat ;
-    width: 1000px; height: 600px;
-}
 
 
 .carousel-img1{
