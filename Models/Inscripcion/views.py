@@ -1,7 +1,9 @@
+from django.db.models import Q
 from django.http import HttpRequest
 from django.shortcuts import render, redirect
 from Models.Inscripcion.forms import formularioInscripcion, formularioNota
 from Models.Inscripcion.forms import Inscripcion, Nota
+from Models.Nivel.forms import Nivel
 import logging
 
 
@@ -72,3 +74,84 @@ class formNotasView(HttpRequest):
     def eliminarNota(request, id):
         Nota.objects.filter(id_nota=id).delete()
         return redirect(to="mostrarNotas")
+
+    #metodos de reporte
+
+class reporInscritosView(HttpRequest): #view de opciones de reporte
+
+
+    def indexReportInscritos(request):
+
+
+        return render(request, 'reportes.html')
+
+    # Reporte de inscritos por fecha
+    def reportInscritos(request):
+        qs = Inscripcion.objects.all()
+
+        date_min = request.GET.get('date_min')
+        date_max= request.GET.get('date_max')
+
+
+        if date_min != '' and date_min is not None:
+            qs = qs.filter(fecha__gte=date_min)
+
+        if date_max != '' and date_max is not None:
+            qs = qs.filter(fecha__lte=date_max)
+
+
+        return render(request, "reportInscritos.html", {'queryset': qs})
+
+    # Reporte de inscritos por grado y curso
+
+
+    def reportInscritos_cursoYgrado(request):
+        qs = Inscripcion.objects.all()
+        grado_seccion = Nivel.objects.all()
+
+        category = request.GET.get('category')
+
+        if category != '' and category is not None and category != 'Seleccion':
+
+            if category == 'Novato Principiantes1':
+
+                variable = 1
+                qs = qs.filter(nivel_id_nivel_id__exact=variable)
+
+            elif category == 'Novato Principiantes2':
+
+                variable = 2
+                qs = qs.filter(nivel_id_nivel_id__exact=variable)
+
+            elif category == 'Experto Avanzados1':
+
+                variable = 3
+                qs = qs.filter(nivel_id_nivel_id__exact=variable)
+            elif category == 'Experto Avanzados2':
+
+                variable = 4
+                qs = qs.filter(nivel_id_nivel_id__exact=variable)
+
+        context = {
+            'queryset': qs,
+            'seccion_grado': grado_seccion
+        }
+        return render(request, 'reportInscritosCurso_Grado.html', context)
+
+    #reporte por alumno de nota
+
+    def reportAlumnoNota(request):
+        qs = Nota.objects.all()
+
+        alumno = request.GET.get('title_contains')
+
+        if alumno != '' and alumno is not None:
+            qs = qs.filter(inscripcion_id_inscripcion__alumno_id_alumno__nombre__contains=alumno)
+
+        context = {
+
+            'queryset': qs
+
+        }
+
+        return render(request, 'reportNotas.html', context )
